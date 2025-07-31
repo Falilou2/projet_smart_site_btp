@@ -1,0 +1,139 @@
+import { Project, Product, Artisan, SafetyReport, DashboardStats } from '../types';
+
+export const dashboardStats: DashboardStats = {
+  totalProjects: 45,
+  activeProjects: 12,
+  totalBudget: 2500000000, // CFA Francs
+  monthlyRevenue: 185000000,
+  safetyScore: 94,
+  artisansCount: 156
+};
+
+export const projects: Project[] = [
+  {
+    id: '1',
+    name: 'Centre Commercial Dakar Plaza',
+    status: 'in-progress',
+    progress: 65,
+    budget: 800000000,
+    spent: 520000000,
+    startDate: '2024-01-15',
+    endDate: '2024-08-30',
+    location: 'Dakar, Plateau',
+    manager: 'Amadou Diallo'
+  },
+  {
+    id: '2',
+    name: 'Résidence Les Palmiers',
+    status: 'planning',
+    progress: 15,
+    budget: 450000000,
+    spent: 67500000,
+    startDate: '2024-03-01',
+    endDate: '2024-12-15',
+    location: 'Almadies',
+    manager: 'Fatou Sarr'
+  },
+  {
+    id: '3',
+    name: 'École Primaire Thiès',
+    status: 'completed',
+    progress: 100,
+    budget: 150000000,
+    spent: 148000000,
+    startDate: '2023-09-01',
+    endDate: '2024-01-30',
+    location: 'Thiès',
+    manager: 'Ousmane Ba'
+  }
+];
+
+export const products: Product[] = [
+  {
+    id: '1',
+    name: 'Ciment Portland 50kg',
+    category: 'materials',
+    price: 4500,
+    unit: 'sac',
+    image: 'https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg?auto=compress&cs=tinysrgb&w=300',
+    inStock: true,
+    supplier: 'Sococim Industries',
+    rating: 4.8
+  },
+  {
+    id: '2',
+    name: 'Pelleteuse CAT 320D',
+    category: 'equipment',
+    price: 85000,
+    unit: 'jour',
+    image: 'https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=300',
+    inStock: true,
+    supplier: 'Equipements Dakar',
+    rating: 4.6
+  },
+  {
+    id: '3',
+    name: 'Fer à béton Ø12mm',
+    category: 'materials',
+    price: 650,
+    unit: 'kg',
+    image: 'https://images.pexels.com/photos/209251/pexels-photo-209251.jpeg?auto=compress&cs=tinysrgb&w=300',
+    inStock: true,
+    supplier: 'Métallurgie du Sahel',
+    rating: 4.7
+  }
+];
+
+export const artisans: Artisan[] = [
+  {
+    id: '1',
+    name: 'Mamadou Ndiaye',
+    specialty: 'Maçonnerie',
+    experience: 12,
+    rating: 4.9,
+    certifications: ['Sécurité Chantier', 'Maçonnerie Moderne'],
+    available: true,
+    location: 'Dakar'
+  },
+  {
+    id: '2',
+    name: 'Aïcha Diouf',
+    specialty: 'Électricité',
+    experience: 8,
+    rating: 4.7,
+    certifications: ['Électricité Bâtiment', 'Normes SENELEC'],
+    available: false,
+    location: 'Thiès'
+  },
+  {
+    id: '3',
+    name: 'Ibrahima Fall',
+    specialty: 'Plomberie',
+    experience: 15,
+    rating: 4.8,
+    certifications: ['Plomberie Sanitaire', 'Installation Solaire'],
+    available: true,
+    location: 'Saint-Louis'
+  }
+];
+
+export const safetyReports: SafetyReport[] = [
+  {
+    id: '1',
+    projectId: '1',
+    type: 'inspection',
+    severity: 'low',
+    description: 'Vérification des équipements de protection individuelle',
+    date: '2024-01-15',
+    resolved: true
+  },
+  {
+    id: '2',
+    projectId: '1',
+    type: 'incident',
+    severity: 'medium',
+    description: 'Chute de matériel depuis le 2ème étage',
+    date: '2024-01-10',
+    resolved: true
+  }
+];
