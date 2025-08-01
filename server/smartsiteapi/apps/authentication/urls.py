@@ -1,7 +1,7 @@
-from django.urls import path, include
-from .api_urls import urlpatterns as api_urlpatterns
+from django.urls import path
+from .views import LoginAPIView, RegisterAPIView
 
 urlpatterns = [
-    path('auth/', include((api_urlpatterns, 'authentication'))),
-    # autres urls...
+    path('login/', LoginAPIView.as_view(), name='login'),
+    path('register/', RegisterAPIView.as_view(), name='register'),
 ]

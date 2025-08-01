@@ -1,0 +1,8 @@
+django
+djangorestframework
+pyrebase4
+urllib3
+requests==2.11.1
+setuptools
+pyyaml
+
