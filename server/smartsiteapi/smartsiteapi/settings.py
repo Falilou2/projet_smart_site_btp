@@ -130,3 +130,13 @@ with open(os.path.join(BASE_DIR, '.env.yaml'), 'r') as f:
 
 JWT_SECRET_KEY = env_config.get('JWT_SECRET_KEY', 'your-fallback-secret')
 JWT_ALGORITHM = env_config.get('JWT_ALGORITHM', 'HS256')
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        # 'rest_framework_simplejwt.authentication.JWTAuthentication',  # Uncomment if using DRF SimpleJWT
+        # For Firebase, we use custom authentication in views, so leave this empty or use SessionAuthentication for browsable API
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.AllowAny',  # Public by default; restrict in views as needed
+    ),
+}

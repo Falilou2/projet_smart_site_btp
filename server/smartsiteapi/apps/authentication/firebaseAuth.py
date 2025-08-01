@@ -1,6 +1,11 @@
 import pyrebase
 import os
 import yaml
+import firebase_admin
+
+# Ensure Firebase Admin is initialized somewhere in your project, e.g. in a startup file or here:
+if not firebase_admin._apps:
+    firebase_admin.initialize_app()
 
 # Load Firebase config from .env.yaml
 with open(os.path.join(os.path.dirname(__file__), '../../.env.yaml'), 'r') as f:

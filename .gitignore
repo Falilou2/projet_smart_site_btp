@@ -23,3 +23,11 @@ dist-ssr
 *.sln
 *.sw?
 .env
+.env*
+*.sqlite3
+htechbtp-7f597-firebase-adminsdk-fbsvc-d74c398155.json
+__pycache__/*
+server/smartsiteapi/.env.yaml
+server/smartsiteapi/db.sqlite3
+*.pyc
+**/__pycache__/
