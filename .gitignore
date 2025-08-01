@@ -25,7 +25,7 @@ dist-ssr
 .env
 .env*
 *.sqlite3
-htechbtp-7f597-firebase-adminsdk-fbsvc-d74c398155.json
+htechbtp-7f597-firebase-adminsdk-fbsvc-dfb1001407.json
 __pycache__/*
 server/smartsiteapi/.env.yaml
 server/smartsiteapi/db.sqlite3
