@@ -32,3 +32,4 @@ class ProductManagementView(APIView):
             return Response({'detail': 'Unauthorized'}, status=status.HTTP_401_UNAUTHORIZED)
         delete_product(product_id)
         return Response({'detail': 'Product deleted'}, status=status.HTTP_204_NO_CONTENT)
+
