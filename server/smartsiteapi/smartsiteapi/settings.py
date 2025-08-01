@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import yaml
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -122,3 +124,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+with open(os.path.join(BASE_DIR, '.env.yaml'), 'r') as f:
+    env_config = yaml.safe_load(f)
+
+JWT_SECRET_KEY = env_config.get('JWT_SECRET_KEY', 'your-fallback-secret')
+JWT_ALGORITHM = env_config.get('JWT_ALGORITHM', 'HS256')

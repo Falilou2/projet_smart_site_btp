@@ -25,8 +25,8 @@ def register_user(request):
             return Response({
                 "message": "Registration successful",
                 "email": email,
-                "localId": user.get("localId"),
-                "token": token
+                #"localId": user.get("localId"),
+                #"token": token
             }, status=status.HTTP_201_CREATED)
         return Response({"error": "Registration failed. Email may already be in use or invalid."}, status=status.HTTP_400_BAD_REQUEST)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

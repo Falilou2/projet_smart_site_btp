@@ -5,4 +5,6 @@ urllib3
 requests==2.11.1
 setuptools
 pyyaml
-
+PyJWT
+google-cloud-firestore
+google-auth
